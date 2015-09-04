@@ -1,10 +1,14 @@
 import java.util.Random;
+import java.util.Scanner;
+import skilstak.c;
 
 public class Magic8Ball
 {
 	public static void main ( String[] args )
 	{
-		Random r = new Random();
+		String name;
+        Scanner in = new Scanner(System.in);
+        Random r = new Random();
 
 		int choice = 1 + r.nextInt(15);
 		String response = "";
@@ -41,7 +45,10 @@ public class Magic8Ball
 			response = "Concentrate and ask again";
 		else
 			response = "8-BALL ERROR!";
-
-		System.out.println( "MAGIC 8-BALL SAYS: " + response );
-	}
+        while (true){      
+		    System.out.println(c.clear + c.green + "What Is Your Question>");
+        
+            System.out.println( "MAGIC 8-BALL SAYS: " + response );
+	    }
+    }
 }
