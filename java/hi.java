@@ -9,9 +9,10 @@ public class hi{
         
         Scanner in = new Scanner(System.in);
 
-         System.out.println(c.clear + c.green + "Enter a string >" + c.x);
+         System.out.println(c.green + "Hi, whats your name" + c.reset);
+         System.out.print(c.reset + "-->" + c.reset);
          name = in.nextLine();
-         System.out.println(c.clear + c.orange + "Hello There "+ c.red  + name + c.x);
+         System.out.println(c.orange + "Hello There "+ c.red  + name + c.x);
                       
         }
 }

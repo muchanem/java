@@ -46,7 +46,7 @@ public class Magic8Ball
 		else
 			response = "8-BALL ERROR!";
         while (true){      
-		    System.out.println(c.clear + c.green + "What Is Your Question>");
+		    System.out.print(c.clear + c.green + "What Is Your Question>");
         
             System.out.println( "MAGIC 8-BALL SAYS: " + response );
 	    }
