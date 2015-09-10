@@ -5,6 +5,12 @@
 // The driver method should ask user to input a question. Then reply the answer on an 8 ball by creating an object and calling the answer method.  
 //Then this method should be applied onto an applet.
 
+import java.util.Scanner;
+import java.util.Random;
+import java.applet.Applet;
+import java.awt.*;
+import java.applet.Applet;
+import java.awt.*;
 public class Answers
 {  
   private int selection;
@@ -47,10 +53,7 @@ public class Answers
 [code]
 
 [code]
-    import java.util.Scanner;
-    import java.util.Random;
-    import java.applet.Applet;
-    import java.awt.*;
+
 public class Ball_8
 {
   public static void main(String []args)
@@ -69,8 +72,7 @@ public class Ball_8
 [code]
 
 [code]
-import java.applet.Applet;
-import java.awt.*;
+
 
 public class DrawBall extends Applet
 {
