@@ -34,7 +34,7 @@ public class Magic8Ball {
         while (playAgain)
             {
 
-            System.out.print("Ask a YES or NO question, and I'll give you the answer\n");
+        System.out.print("What is your question>\n");
             String theQuestion = sc.nextLine();
             String prevQuestion = null;
             theQuestion = theQuestion.toLowerCase();    
