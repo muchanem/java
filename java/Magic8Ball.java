@@ -16,12 +16,12 @@ public class Answers
   private int selection;
   private String response;
   
-  public Answers(int x)
+  private Answers(int x)
   {
     selection = x;
   }
   
-  public String answer()
+  private String answer()
   {
     switch (selection)
     {
@@ -54,9 +54,9 @@ public class Answers
 
 
 
-public class Ball_8
+private class Ball_8
 {
-  public static void main(String []args)
+  private static void main(String []args)
   {
     String question;
     
@@ -73,9 +73,9 @@ public class Ball_8
 
 
 
-public class DrawBall extends Applet
+private class DrawBall extends Applet
 {
-  public void paint(Graphics page)
+  private void paint(Graphics page)
   {
     final int MID =150;
     setBackground(Color.cyan);
