@@ -50,9 +50,9 @@ public class Answers
     return response;
   }
 }
-[code]
 
-[code]
+
+
 
 public class Ball_8
 {
@@ -69,9 +69,8 @@ public class Ball_8
     System.out.println(quest.answer());
   }
 }
-[code]
 
-[code]
+
 
 
 public class DrawBall extends Applet
