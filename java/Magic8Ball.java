@@ -1,4 +1,4 @@
-//8-ball java.The idea is a simple magic 8-ball program complete with graphics.  
+//8i-ball java.The idea is a simple magic 8-ball program complete with graphics.  
 //Hopefully I will get extra credit
 //Requirements: 20 possible answers, user must input a yes/no question. Output answer on an 8 ball, possibly more creative.
 //Design: random number generator for the 20 possible values, use a swith statement to pick out the answer.  Use a driver method to drive.  And output onto an applet.
@@ -47,10 +47,10 @@ public class Answers
 [code]
 
 [code]
-import java.util.Scanner;
-import java.util.Random;
-import java.applet.Applet;
-import java.awt.*;
+    import java.util.Scanner;
+    import java.util.Random;
+    import java.applet.Applet;
+    import java.awt.*;
 public class Ball_8
 {
   public static void main(String []args)
