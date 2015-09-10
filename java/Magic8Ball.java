@@ -1,91 +1,312 @@
-//8i-ball java.The idea is a simple magic 8-ball program complete with graphics.  
-//Hopefully I will get extra credit
-//Requirements: 20 possible answers, user must input a yes/no question. Output answer on an 8 ball, possibly more creative.
-//Design: random number generator for the 20 possible values, use a swith statement to pick out the answer.  Use a driver method to drive.  And output onto an applet.
-// The driver method should ask user to input a question. Then reply the answer on an 8 ball by creating an object and calling the answer method.  
-//Then this method should be applied onto an applet.
-
 import java.util.Scanner;
+
 import java.util.Random;
-import java.applet.Applet;
-import java.awt.*;
-import java.applet.Applet;
-import java.awt.*;
-public class Answers
-{  
-  private int selection;
-  private String response;
-  
-  private Answers(int x)
-  {
-    selection = x;
-  }
-  
-  private String answer()
-  {
-    switch (selection)
-    {
-      case 1: response = "It is certain"; break;
-      case 2: response = "It is decidedly so"; break;
-      case 3: response = "Without a doubt"; break;
-      case 4: response = "Yes – definitely"; break;
-      case 5: response = "You may rely on it"; break;
-      case 6: response = "As I see it, yes"; break;
-      case 7: response = "Most likely"; break;
-      case 8: response = "Outlook good"; break;
-      case 9: response = "Signs point to yes"; break;
-      case 10: response = "Yes"; break;
-      case 11: response = "Reply hazy, try again"; break;
-      case 12: response = "Ask again later"; break;
-      case 13: response = "Better not tell you now"; break;
-      case 14: response = "Cannot predict now"; break;
-      case 15: response = "Concentrate and ask again"; break;
-      case 16: response = "Don't count on it"; break;
-      case 17: response = "My reply is no"; break;
-      case 18: response = "My sources say no"; break;
-      case 19: response = "Outlook not so good"; break;
-      case 20: response = "Very doubtful"; break;
-      default: response = "nothing";
+
+public class Magic8Ball {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        Random generator = new Random();
+        int theAnswer = generator.nextInt(20)+1;
+        boolean playAgain = true;
+        @SuppressWarnings("unused")
+        boolean goAgain = false;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("+-+ +-+-+-+-+");
+        System.out.println("|8| |B|A|L|L|");
+        System.out.println("+-+ +-+-+-+-+");
+
+        System.out.print(":::'###:::::'######::'##:::'##:\n");
+        System.out.print("::'## ##:::'##... ##: ##::'##::\n");
+        System.out.print(":'##:. ##:: ##:::..:: ##:'##:::\n");
+        System.out.print("'##:::. ##:. ######:: #####::::\n");
+        System.out.print(" #########::..... ##: ##. ##:::\n");
+        System.out.print(" ##.... ##:'##::: ##: ##:. ##::\n");
+        System.out.print(" ##:::: ##:. ######:: ##::. ##:\n");
+        System.out.print(" ..:::::..:::......:::..::::..::\n");
+
+        while (playAgain)
+            {
+
+            System.out.print("Ask a YES or NO question, and I'll give you the answer\n");
+            String theQuestion = sc.nextLine();
+            String prevQuestion = null;
+            theQuestion = theQuestion.toLowerCase();    
+
+            if(theQuestion.indexOf("who") != -1 || theQuestion.indexOf("what") != -1 ||
+            theQuestion.indexOf("why") != -1 || theQuestion.indexOf("which") != -1 ||
+            theQuestion.indexOf("how") != -1 || theQuestion.indexOf("When") != -1
+            || theQuestion.indexOf("whats") != -1 || theQuestion.indexOf("what's") != -1)
+
+            {
+                System.out.print("Your question was not stated as a yes or no.\n");
+                System.out.print("Try again...\n");
+                System.out.print("                         ...but don't be stuipid this time....\n");
+            }
+            else
+            {
+
+                if (goAgain = false)
+                {
+                    if (theAnswer == 1) //Yes                
+                    {    
+                    System.out.println("As I see it, yes.\n");
+                    }
+                    if (theAnswer == 2)
+                    {
+                        System.out.println("It is certain\n");
+                    }
+                    if (theAnswer == 3)
+                    {
+                        System.out.println("It is decidedly so\n");
+                    }
+                    if (theAnswer == 4)
+                    {
+                        System.out.println("Most likely\n");
+                        System.out.print("  _____    __  __                   \n");
+                        System.out.print(" |     |_ |__||  |--..-----. .---.-.\n");
+                        System.out.print(" |       ||  ||    < |  -__| |  _  |\n");
+                        System.out.print(" |_______||__||__|__||_____| |___._|\n");
+                        System.out.print("                                    \n");
+                        System.out.print("  __                                \n");
+                        System.out.print(" |  |--..-----..-----..-----.       \n");
+                        System.out.print(" |  _  ||  _  ||__ --||__ --|       \n");
+                        System.out.print(" |_____||_____||_____||_____|       \n");
+
+                    }
+                    if (theAnswer == 5)
+                    {
+                        System.out.println("Outlook good\n");
+                    }
+                    if (theAnswer == 6)
+                    {
+                        System.out.println("Sign points to yes\n");
+                    }
+                    if (theAnswer == 7)
+                    {
+                        System.out.println("Without a doubt\n");
+                    }
+                    if (theAnswer == 8)
+                    {
+                        System.out.print("  __ __           \n");
+                        System.out.print(" |  |  | ___  ___ \n");
+                        System.out.print(" |_   _|| -_||_ -|\n");
+                        System.out.print("   |_|  |___||___|\n");
+
+                    }
+                    if (theAnswer == 9)
+                    {
+                        System.out.println("Yes - definitley\n");
+                    }
+                    if (theAnswer == 10)
+                    {
+                        System.out.println("You may rely on it\n");
+                    }
+                    if (theAnswer == 11) //Maybe
+                    {
+                        System.out.println("Reply hazy, try again\n");
+                    }
+                    if (theAnswer == 12)
+                    {
+                        System.out.println("Ask again later\n");
+                    }
+                    if (theAnswer == 13)
+                    {
+                        System.out.println("Better not tell you now\n");
+                    }
+                    if (theAnswer == 14)
+                    {
+                        System.out.println("Cannot predict now\n");
+                    }
+                    if (theAnswer == 15)
+                    {
+                        System.out.println("Concentrate and ask again\n");
+                    }
+                    if (theAnswer == 16) //NO
+                    {
+                        System.out.println("Don't count on it\n");
+                    }
+                    if (theAnswer == 17)
+                    {
+                    System.out.println("My reply is...\n");
+                    System.out.println("  _           _                    ");
+                    System.out.println(" (_) _       (_)                   ");
+                    System.out.println(" (_)(_)_     (_)    _  _  _        ");
+                    System.out.println(" (_)  (_)_   (_) _ (_)(_)(_) _     ");
+                    System.out.println(" (_)    (_)_ (_)(_)         (_)    ");
+                    System.out.println(" (_)      (_)(_)(_)         (_)    ");
+                    System.out.println(" (_)         (_)(_) _  _  _ (_)    ");
+                    System.out.println(" (_)         (_)   (_)(_)(_)       ");
+
+                    }
+                    if (theAnswer == 18)
+                    {
+                        System.out.println("My sources say no\n");
+                    }
+                    if (theAnswer == 19)
+                    {
+                        System.out.println("Outlook not so good\n");
+                    }
+                    if (theAnswer == 20)
+                    {
+                        System.out.println("Very doubtful\n");
+                    }
+                    if (theQuestion.equals("Am I the boss?"))
+                    {
+                        System.out.println("No... I'm the boss");
+                    }
+                }
+                else
+                {
+                        Random nexGen = new Random();
+                        int nextAnswer = nexGen.nextInt(20)+1;
+                        if (theQuestion == prevQuestion)
+                        {
+                            System.out.println("You just asked that question");
+                        }
+                        if ((nextAnswer == 1) && (!(theQuestion == prevQuestion)))  
+                        {
+                            System.out.println("As I see it, yes\n");
+                        }
+
+                        if ((nextAnswer == 2) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("It is certain\n");
+
+                        }
+                        if ((nextAnswer == 3) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("It is decidedly so\n");
+                        }
+                        if ((nextAnswer == 4) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Most likely\n");
+                            System.out.print("  _____    __  __                   \n");
+                            System.out.print(" |     |_ |__||  |--..-----. .---.-.\n");
+                            System.out.print(" |       ||  ||    < |  -__| |  _  |\n");
+                            System.out.print(" |_______||__||__|__||_____| |___._|\n");
+                            System.out.print("                                    \n");
+                            System.out.print("  __                                \n");
+                            System.out.print(" |  |--..-----..-----..-----.       \n");
+                            System.out.print(" |  _  ||  _  ||__ --||__ --|       \n");
+                            System.out.print(" |_____||_____||_____||_____|       \n");
+                        }
+                        if ((nextAnswer == 5) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Outlook good\n");
+                        }
+                        if ((nextAnswer == 6) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Sign points to yes\n");                        
+                        }
+                        if ((nextAnswer == 7) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Without a doubt\n");                        
+                        }
+                        if ((nextAnswer == 8) && (!(theQuestion == prevQuestion)))
+                        {        
+                            System.out.print("  __ __           \n");
+                            System.out.print(" |  |  | ___  ___ \n");
+                            System.out.print(" |_   _|| -_||_ -|\n");
+                            System.out.print("   |_|  |___||___|\n");
+                        }
+                        if ((nextAnswer == 9) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Yes - definitley\n");                        
+                        }
+                        if ((nextAnswer == 10) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("You may rely on it\n");                        
+                        }
+                        if ((nextAnswer == 11) && (!(theQuestion == prevQuestion))) //Maybe
+                        {
+                            System.out.println("Reply hazy, try again\n");                        
+                        }
+                        if ((nextAnswer == 12) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Try again later\n");                    
+                        }
+                        if ((nextAnswer == 13) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Better not tell you now\n");                
+                        }
+                        if ((nextAnswer == 14) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Cannot predict now\n");                    
+                        }
+                        if ((nextAnswer == 15) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Concentrate and ask again\n");                
+                        }
+                        if ((nextAnswer == 16) && (!(theQuestion == prevQuestion))) //NO
+                        {
+                            System.out.println("Don't count on it\n");                    
+                        }
+                        if ((nextAnswer == 17) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("My reply is...\n");
+                            System.out.println("  _           _                    ");
+                            System.out.println(" (_) _       (_)                   ");
+                            System.out.println(" (_)(_)_     (_)    _  _  _        ");
+                            System.out.println(" (_)  (_)_   (_) _ (_)(_)(_) _     ");
+                            System.out.println(" (_)    (_)_ (_)(_)         (_)    ");
+                            System.out.println(" (_)      (_)(_)(_)         (_)    ");
+                            System.out.println(" (_)         (_)(_) _  _  _ (_)    ");
+                            System.out.println(" (_)         (_)   (_)(_)(_)       ");
+                        }
+                        if ((nextAnswer == 18) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("My sources say no\n");                    
+                        }
+                        if ((nextAnswer == 19) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Outlook not so good\n");                    
+                        }
+                        if ((nextAnswer == 20) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("Very doubtful\n");        
+                        }
+                        if ((theQuestion == prevQuestion) && (!(theQuestion == prevQuestion)))
+                        {
+                            System.out.println("You just asked that question");
+                        }
+                        if ((theQuestion.equals("Am I the boss?")))
+                        {
+                            System.out.println("No... I'm the boss");
+                        }
+
+                if ((!(theQuestion == prevQuestion)))
+                {
+                    System.out.println("There is your answer... Ask another?");
+                    goAgain = true;
+                }
+                String yesNo = sc.nextLine();
+                if ((yesNo.equalsIgnoreCase("Y")) || (yesNo.equalsIgnoreCase("Yes")))
+                {
+                    playAgain = true;
+                }
+                if ((yesNo.equalsIgnoreCase("N")) || (yesNo.equalsIgnoreCase("No")))
+                {
+                    playAgain = false;
+                    System.out.println("Thanks for playing");
+                    System.out.println("http://www.miniCruzer911.co.cc/");
+                    System.out.print(".___  ___.  __  .__   __.  __    ______ \n");
+                    System.out.print("|   \\/   | |  | |  \\ |  | |  |  /      |\n");
+                    System.out.print("|  \\  /  | |  | |   \\|  | |  | |  ,----'\n");
+                    System.out.print("|  |\\/|  | |  | |  . `  | |  | |  |     \n");
+                    System.out.print("|  |  |  | |  | |  |\\   | |  | |  `----.\n");
+                    System.out.print("|__|  |__| |__| |__| \\__| |__|  \\______|\n");
+
+                }
+            }
+        }
     }
-    return response;
-  }
 }
 
-
-
-
-private class Ball_8
-{
-  private static void main(String []args)
-  {
-    String question;
-    
-    Scanner scan = new Scanner(System.in);
-    Random generator = new Random();
-    
-    System.out.println("Ask away. (Preferably yes or no questions");
-    question = scan.next();
-    Answers quest = new Answers(generator.nextInt(20)+1);
-    System.out.println(quest.answer());
-  }
-}
-
-
-
-
-private class DrawBall extends Applet
-{
-  private void paint(Graphics page)
-  {
-    final int MID =150;
-    setBackground(Color.cyan);
-    page.setColor(Color.black);
-    page.fillOval(0,0,300,300);
-    page.setColor(Color.blue);
-    page.fillOval(75,60,150,150);
-    page.setColor(Color.white);
-    page.drawLine(MID-65,100, MID+65,100);
-    page.drawLine(MID-65,100, MID,210);
-    page.drawLine(MID+65,100, MID,210);
-  }
 }
