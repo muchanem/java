@@ -39,17 +39,8 @@ public class Magic8Ball {
             String prevQuestion = null;
             theQuestion = theQuestion.toLowerCase();    
 
-            if(theQuestion.indexOf("who") != -1 || theQuestion.indexOf("what") != -1 ||
-            theQuestion.indexOf("why") != -1 || theQuestion.indexOf("which") != -1 ||
-            theQuestion.indexOf("how") != -1 || theQuestion.indexOf("When") != -1
-            || theQuestion.indexOf("whats") != -1 || theQuestion.indexOf("what's") != -1)
 
-            {
-                System.out.print("Your question was not stated as a yes or no.\n");
-                System.out.print("Try again...\n");
-                System.out.print("                         ...but don't be stuipid this time....\n");
-            }
-            else
+           
             {
 
                 if (goAgain = false)
