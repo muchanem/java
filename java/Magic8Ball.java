@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import java.util.Random;
 
+import skilstak.c;
 public class Magic8Ball {
 
     /**
@@ -34,7 +35,7 @@ public class Magic8Ball {
         while (playAgain)
             {
 
-        System.out.print("What is your question>\n");
+        System.out.print(c.x + c.red + "What is your question>");
             String theQuestion = sc.nextLine();
             String prevQuestion = null;
             theQuestion = theQuestion.toLowerCase();    
