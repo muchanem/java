@@ -1,4 +1,4 @@
-public class Abiility {
+public class Ability {
 
 }
 
