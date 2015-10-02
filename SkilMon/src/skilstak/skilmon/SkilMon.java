@@ -1,5 +1,7 @@
 package skilstak.skilmon;
 import java.util.ArrayList;
+import skilstak.c;
+
 
 public final class SkilMon {
     
@@ -10,6 +12,16 @@ public final class SkilMon {
     public double catchRate, growthRate, height, width, mfRatio;  
     public ArrayList<String> abilities, types, moves;
 
+    
+    public SkilMon() {}
+    public SkilMon(String jsonf) {
+    
+        System.out.println(c.rc() + "Yeah" + jsonf);    
+    
+    }
+
+    
 }
+
 
 

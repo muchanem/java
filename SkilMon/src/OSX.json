@@ -1,0 +1,32 @@
+{
+ "name": "OSX",
+ "uid": "1",
+ "abilities": ["Shell Shock", "What9+10"],
+ "types": ["ihatewindows", "#terminal"],
+ "moves": ["trump", "putin", "stalin"],
+ "description": "#memes",
+ "attack": 100,
+ "sp_attack": 500,
+ "defence": 1,
+ "sp_defence": "1",
+ "species": "Mac",
+ "speed": "100",
+ "total": "677",
+ "catch_rate": "25",
+ "ev_yield": "50 Sp Atk",
+ "evolutions": [
+  {
+    "level": 6,
+    "method": "level up",
+    "to": "Steve Jobs"
+  }
+ ],
+ "exp": "50",
+ "growth_rate": "ms",
+ "happiness": "30",
+ "height": "10",
+ "eight": "6.9",
+ "hp": "100000",
+ "mf_ratio": "87.5"
+
+}
