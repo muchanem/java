@@ -10,7 +10,7 @@
  "defence": 1,
  "sp_defence": "1",
  "species": "Mac",
- "speed": "100",
+ "speed": "1000000000000000",
  "total": "677",
  "catch_rate": "25",
  "ev_yield": "50 Sp Atk",
