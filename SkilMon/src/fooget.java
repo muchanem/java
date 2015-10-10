@@ -12,7 +12,7 @@ public class foo {
     HttpClient client = new DefaultHttpClient;
     HttpResponse res = new client.execute(req);
     HttpEntity ent = res.getEntity();
-    Map data = new Gson().fromJSon(ent.getContent(), Map.class);
+    Map data = new Gson().fromJson(ent.getContent(), Map.class);
     //system.out.println(data);
     System.out.println(c.rc() + "Speed:      " + c.x + data.get("speed"))
 
